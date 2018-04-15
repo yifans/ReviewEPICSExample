@@ -1,0 +1,3 @@
+epicsEnvSet("IOC","iocexample")
+epicsEnvSet("TOP","/home/yifans/Projects/2018/ReviewEPICSExample/exampleApp/example")
+epicsEnvSet("EPICS_BASE","/home/yifans/apps/epics/base")
