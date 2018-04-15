@@ -1,1 +1,5 @@
+# registrar用于在dbd中声明一个registrar
+# 格式 registrar(function_name)
+# function_name 对应的函数，接受空参数，返回void，在源码中使用一个`epicsExportRegistrar`声明
+# 注册了一个helloRegister函数，定义在exampleHello中
 registrar(helloRegister)

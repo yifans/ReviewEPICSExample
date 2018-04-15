@@ -26,4 +26,4 @@ cd "${TOP}/iocBoot/${IOC}"
 iocInit
 
 ## Start any sequence programs
-seq sncExample, "user=yifans"
+#seq sncExample, "user=yifans"

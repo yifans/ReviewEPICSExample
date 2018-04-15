@@ -17,6 +17,14 @@ void hello(const char *name) {
 /* Information needed by iocsh */
 static const iocshArg     helloArg0 = {"name", iocshArgString};
 static const iocshArg    *helloArgs[] = {&helloArg0};
+/*
+iocshFuncDef是一个数据结构
+struct iocshFuncDef {
+  const char *name; //iocshell中命令名字
+  int nargs;
+  const iocshArg * const *arg;
+};
+*/
 static const iocshFuncDef helloFuncDef = {"hello", 1, helloArgs};
 
 /* Wrapper called by iocsh, selects the argument types that hello needs */
@@ -26,6 +34,7 @@ static void helloCallFunc(const iocshArgBuf *args) {
 
 /* Registration routine, runs at startup */
 static void helloRegister(void) {
+  // 向iocsh中注册函数
     iocshRegister(&helloFuncDef, helloCallFunc);
 }
 epicsExportRegistrar(helloRegister);

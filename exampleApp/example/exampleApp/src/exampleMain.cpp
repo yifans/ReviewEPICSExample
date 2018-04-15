@@ -13,10 +13,11 @@
 
 int main(int argc,char *argv[])
 {
-    if(argc>=2) {    
+    if(argc>=2) {
         iocsh(argv[1]);
         epicsThreadSleep(.2);
     }
+    //第二次调用iocsh，进入交互模式
     iocsh(NULL);
     epicsExit(0);
     return(0);
